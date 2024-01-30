@@ -9,8 +9,6 @@ import java.util.List;
 
 @Repository
 public class UserRepository {
-
-
     private final JdbcTemplate jdbc;
 
     public UserRepository(JdbcTemplate jdbc) {
@@ -40,5 +38,11 @@ public class UserRepository {
     public void deleteById(int id) {
         String sql = "DELETE FROM userTable WHERE id=?";
         jdbc.update(sql, id);
+    }
+
+    public User update(User user) {
+        String sql = "UPDATE userTable SET firstName=?, lastName=? WHERE id=?";
+        jdbc.update(sql, user.getFirstName(), user.getLastName(), user.getId());
+        return user;
     }
 }
