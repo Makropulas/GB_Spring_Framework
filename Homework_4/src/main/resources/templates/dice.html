@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: ivory; text-align: center; padding: 10%">
+<head>
+    <meta charset="UTF-8">
+    <title>Dice</title>
+</head>
+<body>
+<h1>Выпало значение: <span th:text="${number}"></span></h1>
+<hr width="15%">
+<form action="/dice" method="get">
+    <input type="submit" value="БРОСИТЬ КУБИК">
+</form>
+<form style="padding: 5%" action="/">
+    <input type="submit" value="ВЕРНУТЬСЯ">
+</form>
+</body>
+</html>
