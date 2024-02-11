@@ -1,0 +1,2 @@
+INSERT INTO tasks (description, status, date_of_creation) VALUES ('Some description', 'NOT_STARTED', null);
+INSERT INTO tasks (description, status, date_of_creation) VALUES ('Another description', 'IN_PROGRESS', null);

@@ -1,5 +1,6 @@
 package ru.dmalomoshin.homework2.repositories;
 
+import lombok.AllArgsConstructor;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
@@ -8,12 +9,9 @@ import ru.dmalomoshin.homework2.model.User;
 import java.util.List;
 
 @Repository
+@AllArgsConstructor
 public class UserRepository {
     private final JdbcTemplate jdbc;
-
-    public UserRepository(JdbcTemplate jdbc) {
-        this.jdbc = jdbc;
-    }
 
     public List<User> findAll() {
         String sql = "SELECT * FROM userTable";

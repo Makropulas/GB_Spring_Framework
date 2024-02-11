@@ -1,5 +1,7 @@
 package ru.dmalomoshin.homework2.controllers;
 
+import lombok.AllArgsConstructor;
+import lombok.extern.java.Log;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,12 +13,10 @@ import ru.dmalomoshin.homework2.service.UserService;
 import java.util.List;
 
 @Controller
+@AllArgsConstructor
+@Log
 public class UserController {
     private final UserService userService;
-
-    public UserController(UserService userService) {
-        this.userService = userService;
-    }
 
     @GetMapping("/users")
     public String findAll(Model model) {
