@@ -4,12 +4,13 @@ import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import ru.dmalomoshin.homework5.model.Task;
 import ru.dmalomoshin.homework5.service.TaskService;
-import ru.dmalomoshin.homework5.status.TaskStatus;
+import ru.dmalomoshin.homework5.model.TaskStatus;
 
 import java.util.List;
 
 @RestController
 @AllArgsConstructor
+@RequestMapping("/tasks")
 public class TaskController {
 
     private final TaskService taskService;

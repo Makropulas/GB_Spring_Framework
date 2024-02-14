@@ -2,7 +2,6 @@ package ru.dmalomoshin.homework5.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import ru.dmalomoshin.homework5.status.TaskStatus;
 
 import java.time.LocalDateTime;
 
@@ -18,9 +17,11 @@ public class Task {
     @Column(nullable = false)
     private String description;
 
+    @Column
+    @Enumerated(EnumType.STRING)
     private TaskStatus status;
 
     @Column(name = "date_of_creation")
-    private LocalDateTime creationDate;
+    private LocalDateTime creationDate = LocalDateTime.now().withNano(0);
 
 }

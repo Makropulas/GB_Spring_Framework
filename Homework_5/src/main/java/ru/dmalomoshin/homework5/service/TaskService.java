@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import ru.dmalomoshin.homework5.model.Task;
 import ru.dmalomoshin.homework5.repository.TaskRepository;
-import ru.dmalomoshin.homework5.status.TaskStatus;
+import ru.dmalomoshin.homework5.model.TaskStatus;
 
 import java.util.List;
 import java.util.Optional;
@@ -12,6 +12,7 @@ import java.util.Optional;
 @Service
 @AllArgsConstructor
 public class TaskService {
+
     private final TaskRepository repository;
 
     public List<Task> getAllTasks() {
