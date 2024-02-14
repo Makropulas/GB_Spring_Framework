@@ -7,7 +7,7 @@ import lombok.EqualsAndHashCode;
 @EqualsAndHashCode(callSuper = true)
 @Data
 @Entity
-public class UsersProject extends EntitiyWithRelation {
+public class UsersProject extends EntityWithRelation {
 
     private Long projectId;
 
