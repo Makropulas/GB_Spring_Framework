@@ -10,12 +10,12 @@ import java.util.Optional;
 
 @Service
 @AllArgsConstructor
-public class NoteService implements iNoteService{
+public class NoteService implements iNoteService {
 
     private NoteRepository repository;
 
     @Override
-    public Note addNote(Note note) {
+    public Note createNote(Note note) {
         return repository.save(note);
     }
 
@@ -30,12 +30,20 @@ public class NoteService implements iNoteService{
     }
 
     @Override
-    public Note updateNote(Note note) {
-        return null;
+    public Note updateNote(Long id, Note updatedNote) {
+        Optional<Note> optionalNote = getNoteFromId(id);
+        if (optionalNote.isPresent()) {
+            Note note = optionalNote.get();
+            note.setContent(updatedNote.getContent());
+            repository.save(note);
+            return note;
+        } else {
+            return null;
+        }
     }
 
     @Override
     public void deleteNote(Long id) {
-
+        repository.deleteById(id);
     }
 }

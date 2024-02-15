@@ -7,13 +7,13 @@ import java.util.Optional;
 
 public interface iNoteService {
 
-    Note addNote(Note note);
+    Note createNote(Note note);
 
     List<Note> getAllNotes();
 
     Optional<Note> getNoteFromId(Long id);
 
-    Note updateNote(Note note);
+    Note updateNote(Long id, Note note);
 
     void deleteNote(Long id);
 
