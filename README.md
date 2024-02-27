@@ -184,5 +184,5 @@ b) Использовать аннотации @ConfigurationProperties и @Conf
 Добавить в один из Ваших проектов сделанных ранее ApiGateWay и Eureka. В проекте обязательно должна быть Spring Data.
 
 >Проверка работоспособности:\
- http://localhost:8080/books\
- http://localhost:8080/tasks
+>http://localhost:8080/books \
+>http://localhost:8080/tasks
