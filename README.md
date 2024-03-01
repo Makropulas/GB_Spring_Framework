@@ -177,12 +177,27 @@ b) Использовать аннотации @ConfigurationProperties и @Conf
 4. Результаты регистрации в консоль
 
 
-## Урок 9. Spring Cloud. Микросервисная архитектура.
+## Урок 9. Spring Cloud. Микросервисная архитектура
 
 ### [Базовое задание](Homework_9):
 
 Добавить в один из Ваших проектов сделанных ранее ApiGateWay и Eureka. В проекте обязательно должна быть Spring Data.
 
+`За основу взяты Homework_5 и Homework_8`
+
 >Проверка работоспособности:\
 >http://localhost:8080/books \
 >http://localhost:8080/tasks
+
+
+## Урок 10. Spring Testing. JUnit и Mockito для написания тестов
+
+### [Базовое задание](Homework_10):
+
+По аналогии с примерами показанными на семинаре, добавить модульное тестирование и интеграционное для одного из своих проектов(так же протестировать один из методов сервиса).
+
+`За основу взят Homework_6. В проекте переработаны сервис и контроллер, а также, добавлены исключения`
+
+>[Модульные тесты](Homework_10/src/test/java/ru/dmalomoshin/homework10/service/NoteServiceTest.java) \
+>[Интеграционные тесты](Homework_10/src/test/java/ru/dmalomoshin/homework10/NoteIntegrationTests.java)
+
