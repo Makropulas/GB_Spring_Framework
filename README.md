@@ -201,3 +201,15 @@ b) Использовать аннотации @ConfigurationProperties и @Conf
 >[Модульные тесты](Homework_10/src/test/java/ru/dmalomoshin/homework10/service/NoteServiceTest.java) \
 >[Интеграционные тесты](Homework_10/src/test/java/ru/dmalomoshin/homework10/NoteIntegrationTests.java)
 
+
+## Урок 11. Spring Actuator. Настройка мониторинга с Prometheus и Grafana
+
+### [Задание](Homework_11):
+
+Используйте Spring Actuator для отслеживания метрик вашего приложения. Настройте визуализацию этих метрик с использованием Prometheus и Grafana.
+
+`За основу взят Homework_9. Выполнено задание "со звёздочкой" - многомодульное с собственными метриками`
+
+>[Файл настроек Prometheus](Homework_11/prometheus.yml) \
+>[Скриншот Grafana с добавленными контрольными точками](Homework_11/Screen_Grafana.jpg)
+
